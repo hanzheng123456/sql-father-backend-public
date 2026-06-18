@@ -25,7 +25,7 @@ public class FreeMarkerTest {
     void test() throws IOException, TemplateException {
         // 配置
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
-        cfg.setDirectoryForTemplateLoading(new File("src/main/resources/templates"));
+        cfg.setDirectoryForTemplateLoading(new File("sql-father-backend-public/src/main/resources/templates"));
         cfg.setDefaultEncoding("UTF-8");
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         cfg.setLogTemplateExceptions(false);

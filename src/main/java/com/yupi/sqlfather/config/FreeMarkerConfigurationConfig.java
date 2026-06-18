@@ -1,5 +1,6 @@
 package com.yupi.sqlfather.config;
 
+import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateExceptionHandler;
 import java.io.File;
@@ -17,7 +18,7 @@ public class FreeMarkerConfigurationConfig {
     @Bean
     public Configuration configuration() throws IOException {
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
-        cfg.setDirectoryForTemplateLoading(new File("src/main/resources/templates"));
+        cfg.setTemplateLoader(new ClassTemplateLoader(FreeMarkerConfigurationConfig.class, "/templates"));
         cfg.setDefaultEncoding("UTF-8");
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         cfg.setLogTemplateExceptions(false);

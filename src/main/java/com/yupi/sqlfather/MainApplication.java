@@ -11,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class MainApplication {
 
     public static void main(String[] args) {
+        System.out.println("工作目录：" + System.getProperty("user.dir"));
         SpringApplication.run(MainApplication.class, args);
     }
 
